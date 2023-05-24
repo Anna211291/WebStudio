@@ -40,6 +40,15 @@
             </li>
           </ul>
         </nav>
+        <button
+          class="menu-toggle js-open-menu"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+        >
+          <svg width="32" height="22">
+            <use href="./images/icons.svg#icon-hamburger"></use>
+          </svg>
+        </button>
         <address class="contacts">
           <ul class="list contacts-list">
             <li class="contacts-item">
@@ -70,7 +79,7 @@
       <section class="section">
         <div class="container">
           <h2 class="text visually-hidden">About</h2>
-          <ul class="list">
+          <ul class="list about">
             <li class="about-list">
               <div class="about-icon-card">
                 <svg class="about-icon" width="64" height="64">
@@ -78,7 +87,7 @@
                 </svg>
               </div>
               <h3 class="text-sub">Strategy</h3>
-              <p class="text-information">
+              <p class="text-information-about">
                 Our goal is to identify the business problem to walk away with
                 the perfect and creative solution.
               </p>
@@ -90,7 +99,7 @@
                 </svg>
               </div>
               <h3 class="text-sub">Punctuality</h3>
-              <p class="text-information">
+              <p class="text-information-about">
                 Bring the key message to the brand's audience for the best price
                 within the shortest possible time.
               </p>
@@ -102,7 +111,7 @@
                 </svg>
               </div>
               <h3 class="text-sub">Diligence</h3>
-              <p class="text-information">
+              <p class="text-information-about">
                 Research and confirm brands that present the strongest digital
                 growth opportunities and minimize risk.
               </p>
@@ -114,7 +123,7 @@
                 </svg>
               </div>
               <h3 class="text-sub">Technologies</h3>
-              <p class="text-information">
+              <p class="text-information-about">
                 Design practice focused on digital experiences. We bring forth a
                 deep passion for problem-solving.
               </p>
@@ -129,6 +138,10 @@
           <ul class="list">
             <li class="gallery-images">
               <img
+                srcset="
+                  ./images/gallery/img-1.jpg    1x,
+                  ./images/gallery/img-1@2x.jpg 2x
+                "
                 src="./images/gallery/img-1.jpg"
                 alt="site design"
                 width="360"
@@ -137,6 +150,10 @@
             </li>
             <li class="gallery-images">
               <img
+                srcset="
+                  ./images/gallery/img-2.jpg    1x,
+                  ./images/gallery/img-2@2x.jpg 2x
+                "
                 src="./images/gallery/img-2.jpg"
                 alt="up design"
                 width="360"
@@ -145,6 +162,10 @@
             </li>
             <li class="gallery-images">
               <img
+                srcset="
+                  ./images/gallery/img-3.jpg    1x,
+                  ./images/gallery/img-3@2x.jpg 2x
+                "
                 src="./images/gallery/img-3.jpg"
                 alt="pictures"
                 width="360"
@@ -161,13 +182,17 @@
           <ul class="list card-set">
             <li class="team-list">
               <img
+                srcset="
+                  ./images/our-team/mark.jpg    1x,
+                  ./images/our-team/mark@2x.jpg 2x
+                "
                 src="./images/our-team/mark.jpg"
                 alt="Mark Guerrero"
                 width="264"
                 height="260"
               />
               <div class="team-information">
-                <h3 class="text-sub">Mark Guerrero</h3>
+                <h3 class="text-sub card-name">Mark Guerrero</h3>
                 <p class="text-information">Product Designer</p>
                 <ul class="socials list">
                   <li class="social-item">
@@ -227,13 +252,17 @@
             </li>
             <li class="team-list">
               <img
+                srcset="
+                  ./images/our-team/tom.jpg    1x,
+                  ./images/our-team/tom@2x.jpg 2x
+                "
                 src="./images/our-team/tom.jpg"
                 alt="Tom Ford"
                 width="264"
                 height="260"
               />
               <div class="team-information">
-                <h3 class="text-sub">Tom Ford</h3>
+                <h3 class="text-sub card-name">Tom Ford</h3>
                 <p class="text-information">Frontend Developer</p>
                 <ul class="socials list">
                   <li class="social-item">
@@ -293,13 +322,17 @@
             </li>
             <li class="team-list">
               <img
+                srcset="
+                  ./images/our-team/camila.jpg    1x,
+                  ./images/our-team/camila@2x.jpg 2x
+                "
                 src="./images/our-team/camila.jpg"
                 alt="Camila Garcia"
                 width="264"
                 height="260"
               />
               <div class="team-information">
-                <h3 class="text-sub">Camila Garcia</h3>
+                <h3 class="text-sub card-name">Camila Garcia</h3>
                 <p class="text-information">Marketing</p>
                 <ul class="socials list">
                   <li class="social-item">
@@ -359,13 +392,17 @@
             </li>
             <li class="team-list">
               <img
+                srcset="
+                  ./images/our-team/daniel.jpg    1x,
+                  ./images/our-team/daniel@2x.jpg 2x
+                "
                 src="./images/our-team/daniel.jpg"
                 alt="Daniel Wilson"
                 width="264"
                 height="260"
               />
               <div class="team-information">
-                <h3 class="text-sub">Daniel Wilson</h3>
+                <h3 class="text-sub card-name">Daniel Wilson</h3>
                 <p class="text-information">UI Designer</p>
                 <ul class="socials list">
                   <li class="social-item">
@@ -428,7 +465,7 @@
       </section>
       <!-- Customer section -->
       <section class="section customers-section">
-        <div class="container">
+        <div class="container customers-container">
           <h2 class="text customer-title">Customers</h2>
           <ul class="customers list">
             <li class="customers-item">
@@ -677,6 +714,101 @@
         </form>
       </div>
     </div>
+    <!-- Mobile menu -->
+    <div class="menu-container js-menu-container" id="mobile-menu">
+      <button class="modal-close-btn js-close-menu">
+        <svg class="modal-close-icon" width="8" height="8">
+          <use href="./images/icons.svg#icon-close"></use>
+        </svg>
+      </button>
+
+      <ul class="mobile-menu list nav-list">
+        <li class="nav-item nav-mobile">
+          <a class="mobile-link" href="./index.html">Studio</a>
+        </li>
+        <li class="nav-item nav-mobile">
+          <a class="mobile-link" href="./portfolio.html">Portfolio</a>
+        </li>
+        <li class="nav-item nav-mobile">
+          <a class="mobile-link" href="">Contacts</a>
+        </li>
+      </ul>
+      <ul class="list mobile-contacts-list">
+        <li class="contacts-item contacts-phone">
+          <a class="link contacts-link" href="tel:+110001111111"
+            >+11 (000) 111-11-11</a
+          >
+        </li>
+        <li class="contacts-item contacts-email">
+          <a class="link contacts-link" href="mailto:info@devstudio.com"
+            >info@devstudio.com</a
+          >
+        </li>
+      </ul>
+      <ul class="mobile-socials list">
+        <li class="social-item">
+          <a
+            class="social-link link"
+            href=""
+            target="_blank"
+            rel="noopener no-referrer"
+            aria-label="icon-instagram"
+          >
+            <svg class="social-icon" width="24" height="24">
+              <use href="./images/icons.svg#icon-instagram"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="social-item">
+          <a
+            class="social-link link"
+            href=""
+            target="_blank"
+            rel="noopener no-referrer"
+            aria-label="icon-twitter"
+          >
+            <svg class="social-icon" width="24" height="24">
+              <use href="./images/icons.svg#icon-twitter"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="social-item">
+          <a
+            class="social-link link"
+            href=""
+            target="_blank"
+            rel="noopener no-referrer"
+            aria-label="icon-facebook"
+          >
+            <svg class="social-icon" width="24" height="24">
+              <use href="./images/icons.svg#icon-facebook"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="social-item">
+          <a
+            class="social-link link"
+            href=""
+            target="_blank"
+            rel="noopener no-referrer"
+            aria-label="icon-linkedin"
+          >
+            <svg class="social-icon" width="24" height="24">
+              <use href="./images/icons.svg#icon-linkedin"></use>
+            </svg>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <!-- Modal script -->
     <script src="./js/modal.js"></script>
+    <!-- Mobile menu script -->
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+      integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+      crossorigin="anonymous"
+    ></script>
+    <script defer src="js/mobile-menu.js"></script>
   </body>
 </html>
