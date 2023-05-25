@@ -53,7 +53,7 @@
         </button>
         <address class="contacts">
           <ul class="list contacts-list">
-            <li class="contacts-item">
+            <li class="contacts-item email-link">
               <a class="link contacts-link" href="mailto:info@devstudio.com"
                 >info@devstudio.com</a
               >
@@ -249,7 +249,6 @@
                     width="396"
                     height="280"
                   />
-
                   <p class="overlay-text">
                     14 Stylish and User-Friendly App Design Concepts · Task
                     Manager App · Calorie Tracker App · Exotic Fruit Ecommerce
@@ -257,9 +256,9 @@
                   </p>
                 </div>
                 <div class="portfolio-item">
-                  <portfolio-card-name class="text-sub portfolio-card-name"
-                    >Screen Illustrations</portfolio-card-name
-                  >
+                  <h2 class="text-sub portfolio-card-name">
+                    Screen Illustrations
+                  </h2>
                   <p class="text-portfolio">Design</p>
                 </div>
               </a>
@@ -496,18 +495,18 @@
     </footer>
     <!-- Mobile menu -->
     <div class="menu-container js-menu-container" id="mobile-menu">
-      <button class="modal-close-btn js-close-menu">
+      <button type="button" class="modal-close-btn js-close-menu">
         <svg class="modal-close-icon" width="8" height="8">
           <use href="./images/icons.svg#icon-close"></use>
         </svg>
       </button>
 
-      <ul class="mobile-menu list nav-list">
+      <ul class="mobile-menu list">
         <li class="nav-item nav-mobile">
           <a class="mobile-link" href="./index.html">Studio</a>
         </li>
         <li class="nav-item nav-mobile">
-          <a class="mobile-link" href="./portfolio.html">Portfolio</a>
+          <a class="mobile-link active" href="./portfolio.html">Portfolio</a>
         </li>
         <li class="nav-item nav-mobile">
           <a class="mobile-link" href="">Contacts</a>
@@ -515,12 +514,12 @@
       </ul>
       <ul class="list mobile-contacts-list">
         <li class="contacts-item contacts-phone">
-          <a class="link contacts-link" href="tel:+110001111111"
-            >+11 (000) 111-11-11</a
+          <a class="link contacts-link-phone" href="tel:+110001111111"
+            >+11 (000) 1111111</a
           >
         </li>
         <li class="contacts-item contacts-email">
-          <a class="link contacts-link" href="mailto:info@devstudio.com"
+          <a class="link contacts-link-email" href="mailto:info@devstudio.com"
             >info@devstudio.com</a
           >
         </li>
