@@ -91,15 +91,12 @@ button {
 }
 .logo {
   font-family: var(--secondary-font);
-
   font-weight: 800;
   font-size: 18px;
   line-height: 1.17;
-
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: var(--color-iris);
-
   padding: 24px 0;
   margin-right: 120px;
 }
@@ -172,6 +169,9 @@ button {
   .nav-list {
     display: none;
   }
+  .logo {
+    margin-right: 0;
+  }
 }
 .nav-menu {
   font-weight: 500;
@@ -224,7 +224,6 @@ button {
 @media only screen and (min-width: 1158px) {
   .contacts-list {
     display: flex;
-
     gap: 40px;
     padding: 24px 0;
   }
@@ -240,8 +239,9 @@ button {
 }
 @media only screen and (min-width: 768px) and (max-width: 1158px) {
   .email-link {
-    padding-bottom: 12px;
+    margin-bottom: 12px;
   }
+
   .contacts-item {
     font-size: 12px;
     line-height: 1.17;
@@ -530,7 +530,7 @@ button {
 
 /* Customers section styles */
 .customers-section {
-  padding-top: 120px;
+  padding-top: 96px;
 }
 
 .customers {
@@ -562,6 +562,9 @@ button {
 @media only screen and (min-width: 1158px) {
   .customers {
     column-gap: var(--indent-vertical);
+  }
+  .customers-section {
+    padding-top: 120px;
   }
   .customers-link {
     width: 168px;
@@ -869,7 +872,6 @@ button {
     align-items: center;
     margin: 0 auto;
     gap: 72px 24px;
-    margin: 0 auto;
     width: 582px;
   }
   .logo-footer,
@@ -878,7 +880,7 @@ button {
   }
   .footer-block,
   .footer-icon {
-    margin: 0;
+    margin: 0 0 auto;
   }
   .footer-form-wrapper {
     gap: 16px 24px;
@@ -958,7 +960,7 @@ button {
 }
 .modal {
   width: 95%;
-  min-height: 95%;
+  min-height: 586px;
   position: absolute;
   top: calc(50%);
   left: calc(50%);
@@ -973,7 +975,6 @@ button {
 @media only screen and (min-width: 428px) {
   .modal {
     width: 392px;
-    min-height: 586px;
     padding: 72px 16px 24px;
   }
 }
