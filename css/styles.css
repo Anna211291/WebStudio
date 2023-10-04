@@ -1140,7 +1140,7 @@ button {
   left: 0;
   width: 100vw;
   height: 100vh;
-  padding: 80px 24px 40px 30px;
+  padding: 80px 24px 50px 30px;
   background-color: var(--color-white);
   z-index: 999;
   transform: translateX(100%);
